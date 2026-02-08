@@ -1,0 +1,5 @@
+{
+  "name": "TransFlow Landing Page",
+  "description": "A minimalist, responsive landing page for TransFlow, a macOS real-time transcription and translation app featuring privacy-first design and Apple Neural Engine integration.",
+  "requestFramePermissions": []
+}
