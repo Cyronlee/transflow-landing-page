@@ -1,7 +1,7 @@
 import React from 'react';
 import { useI18n } from '../i18n';
 
-const DOWNLOAD_URL = 'https://github.com/Cyronlee/TransFlow/releases/download/v1.0.0/TransFlow-1.0.0.dmg';
+const DOWNLOAD_URL = 'https://github.com/Cyronlee/TransFlow/releases/download/v1.1.0/TransFlow-1.1.0.dmg';
 
 const Hero: React.FC = () => {
   const { t } = useI18n();

@@ -52,7 +52,7 @@ export const FEATURES: Feature[] = [
   {
     id: 'lightweight',
     title: '🪶 轻量小巧',
-    description: '应用体积不到 800KB，小而美，即装即用，极致节省磁盘空间。',
+    description: '应用体积不到 900KB，小而美，即装即用，极致节省磁盘空间。',
     icon: null,
   },
 ];

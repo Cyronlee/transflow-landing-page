@@ -53,9 +53,9 @@ const translations: Record<Locale, Translations> = {
       subtitle1: 'macOS 实时语音转录与翻译 App。',
       subtitle2: 'Apple Speech 原生驱动，性能与隐私双在线。',
       downloadBtn: '立即下载',
-      version: 'v1.0.0',
+      version: 'v1.1.0',
       compatibility: '适用于 macOS Ventura+',
-      lightweight: '体积不到 800KB，轻如蝉翼',
+      lightweight: '体积不到 900KB，轻如蝉翼',
     },
     features: {
       sectionTitle: '核心功能',
@@ -98,7 +98,7 @@ const translations: Record<Locale, Translations> = {
         {
           id: 'lightweight',
           title: '🪶 轻量小巧',
-          description: '应用体积不到 800KB，小而美，即装即用，极致节省磁盘空间。',
+          description: '应用体积不到 900KB，小而美，即装即用，极致节省磁盘空间。',
         },
       ],
     },
@@ -158,9 +158,9 @@ const translations: Record<Locale, Translations> = {
       subtitle1: 'Real-time speech transcription & translation for macOS.',
       subtitle2: 'Natively powered by Apple Speech — performance and privacy, both online.',
       downloadBtn: 'Download Now',
-      version: 'v1.0.0',
+      version: 'v1.1.0',
       compatibility: 'Requires macOS Ventura+',
-      lightweight: 'Less than 800KB, ultra lightweight',
+      lightweight: 'Less than 900KB, ultra lightweight',
     },
     features: {
       sectionTitle: 'Key Features',
@@ -203,7 +203,7 @@ const translations: Record<Locale, Translations> = {
         {
           id: 'lightweight',
           title: '🪶 Ultra Lightweight',
-          description: 'App size under 800KB — small, beautiful, ready to use, saving maximum disk space.',
+          description: 'App size under 900KB — small, beautiful, ready to use, saving maximum disk space.',
         },
       ],
     },
