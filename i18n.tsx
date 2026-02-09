@@ -2,9 +2,16 @@ import React, { createContext, useContext, useState, useCallback, ReactNode } fr
 
 export type Locale = 'zh' | 'en';
 
+interface GuideStep {
+  title: string;
+  description: string;
+  image?: string;
+}
+
 interface Translations {
   nav: {
     download: string;
+    guide: string;
   };
   hero: {
     title: string;
@@ -23,6 +30,10 @@ interface Translations {
       description: string;
     }[];
   };
+  guide: {
+    sectionTitle: string;
+    steps: GuideStep[];
+  };
   footer: {
     rights: string;
     feedback: string;
@@ -35,6 +46,7 @@ const translations: Record<Locale, Translations> = {
   zh: {
     nav: {
       download: '下载',
+      guide: '安装指南',
     },
     hero: {
       title: 'TransFlow',
@@ -90,6 +102,45 @@ const translations: Record<Locale, Translations> = {
         },
       ],
     },
+    guide: {
+      sectionTitle: '安装和使用指南',
+      steps: [
+        {
+          title: '第 1 步：拖拽安装',
+          description: '下载 DMG 文件后，打开并将 TransFlow 拖入 Applications 文件夹完成安装。',
+          image: '/drag-to-install.png',
+        },
+        {
+          title: '第 2 步：首次打开',
+          description: '从 Applications 中打开 TransFlow，系统会弹出安全提示。请点击「Done」（完成），不要点「Move to Trash」（移到废纸篓）。',
+          image: '/not-move-to-trash.png',
+        },
+        {
+          title: '第 3 步：信任应用',
+          description: '打开系统设置 → Privacy & Security（隐私与安全性），找到 TransFlow 的提示，点击「Open Anyway」（仍然打开）。',
+          image: '/open-anyway.png',
+        },
+        {
+          title: '第 4 步：授予录制权限',
+          description: '除了麦克风权限外，还需要授予「Screen & System Audio Recording」（屏幕与系统音频录制）权限，这样 TransFlow 才能监听其他 App 的声音进行转录。',
+          image: '/recording-permission.png',
+        },
+        {
+          title: '第 5 步：下载语音识别模型',
+          description: '在 Settings 中下载需要识别的语言对应的 Speech 模型，这样才能进行实时语音转录。',
+          image: '/speech-models.png',
+        },
+        {
+          title: '第 6 步：下载翻译语言包',
+          description: '如果需要翻译功能，首次使用时会提示下载对应语言包，下载完成后即可使用实时翻译。',
+          image: '/download-translation-language.png',
+        },
+        {
+          title: '开始使用！',
+          description: '一切准备就绪，现在可以愉快地使用 TransFlow 进行实时语音转录和翻译了！',
+        },
+      ],
+    },
     footer: {
       rights: '© 2026 TransFlow. All rights reserved.',
       feedback: '反馈与 Issue',
@@ -100,6 +151,7 @@ const translations: Record<Locale, Translations> = {
   en: {
     nav: {
       download: 'Download',
+      guide: 'Setup Guide',
     },
     hero: {
       title: 'TransFlow',
@@ -152,6 +204,45 @@ const translations: Record<Locale, Translations> = {
           id: 'lightweight',
           title: '🪶 Ultra Lightweight',
           description: 'App size under 800KB — small, beautiful, ready to use, saving maximum disk space.',
+        },
+      ],
+    },
+    guide: {
+      sectionTitle: 'Setup & Usage Guide',
+      steps: [
+        {
+          title: 'Step 1: Drag to Install',
+          description: 'After downloading the DMG file, open it and drag TransFlow into the Applications folder to install.',
+          image: '/drag-to-install.png',
+        },
+        {
+          title: 'Step 2: First Launch',
+          description: 'Open TransFlow from Applications. macOS will show a security warning. Click "Done" — do NOT click "Move to Trash".',
+          image: '/not-move-to-trash.png',
+        },
+        {
+          title: 'Step 3: Trust the App',
+          description: 'Go to System Settings → Privacy & Security, find the TransFlow message, and click "Open Anyway".',
+          image: '/open-anyway.png',
+        },
+        {
+          title: 'Step 4: Grant Recording Permission',
+          description: 'In addition to microphone access, you need to grant "Screen & System Audio Recording" permission so TransFlow can capture audio from other apps for transcription.',
+          image: '/recording-permission.png',
+        },
+        {
+          title: 'Step 5: Download Speech Models',
+          description: 'In Settings, download the speech model for the language you want to transcribe. This enables real-time speech recognition.',
+          image: '/speech-models.png',
+        },
+        {
+          title: 'Step 6: Download Translation Languages',
+          description: 'If you need translation, you will be prompted to download the corresponding language pack on first use. Once downloaded, real-time translation is ready.',
+          image: '/download-translation-language.png',
+        },
+        {
+          title: 'Ready to Go!',
+          description: 'Everything is set up. Now enjoy real-time speech transcription and translation with TransFlow!',
         },
       ],
     },

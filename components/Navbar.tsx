@@ -11,6 +11,18 @@ const Navbar: React.FC = () => {
     window.location.href = DOWNLOAD_URL;
   };
 
+  const handleGuideClick = () => {
+    // Dispatch custom event to open the guide
+    window.dispatchEvent(new CustomEvent('open-setup-guide'));
+    // Scroll to the guide section
+    setTimeout(() => {
+      const el = document.getElementById('setup-guide');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-nav h-[60px] border-b border-slate-200/50 flex items-center px-6 md:px-12 transition-all duration-300">
       <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
@@ -20,6 +32,12 @@ const Navbar: React.FC = () => {
         </div>
 
         <div className="flex items-center space-x-3">
+          <button
+            onClick={handleGuideClick}
+            className="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all border border-slate-200"
+          >
+            {t.nav.guide}
+          </button>
           <button
             onClick={toggleLocale}
             className="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all border border-slate-200"
