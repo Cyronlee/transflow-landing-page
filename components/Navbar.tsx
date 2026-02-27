@@ -1,8 +1,9 @@
 
 import React from 'react';
 import { useI18n } from '../i18n';
+import { version } from '../version.json';
 
-const DOWNLOAD_URL = 'https://github.com/Cyronlee/TransFlow/releases/download/v1.2.0/TransFlow-1.2.0.dmg';
+const DOWNLOAD_URL = `https://github.com/Cyronlee/TransFlow/releases/download/v${version}/TransFlow-${version}.dmg`;
 
 const Navbar: React.FC = () => {
   const { locale, t, toggleLocale } = useI18n();

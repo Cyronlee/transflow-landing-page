@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import { version } from './version.json';
 
 export type Locale = 'zh' | 'en';
 
@@ -40,6 +41,10 @@ interface Translations {
     github: string;
     privacy: string;
   };
+  community: {
+    sectionTitle: string;
+    description: string;
+  };
 }
 
 const translations: Record<Locale, Translations> = {
@@ -53,7 +58,7 @@ const translations: Record<Locale, Translations> = {
       subtitle1: 'macOS 实时语音转录与翻译 App。',
       subtitle2: 'Apple Speech 原生驱动，性能与隐私双在线。',
       downloadBtn: '立即下载',
-      version: 'v1.2.0',
+      version: `v${version}`,
       compatibility: '适用于 macOS Ventura+',
       lightweight: '体积不到 900KB，轻如蝉翼',
     },
@@ -147,6 +152,10 @@ const translations: Record<Locale, Translations> = {
       github: 'GitHub',
       privacy: '隐私政策',
     },
+    community: {
+      sectionTitle: '加入交流群',
+      description: '扫描二维码加入微信群，与其他用户交流使用心得，获取最新更新资讯。',
+    },
   },
   en: {
     nav: {
@@ -158,7 +167,7 @@ const translations: Record<Locale, Translations> = {
       subtitle1: 'Real-time speech transcription & translation for macOS.',
       subtitle2: 'Natively powered by Apple Speech — performance and privacy, both online.',
       downloadBtn: 'Download Now',
-      version: 'v1.2.0',
+      version: `v${version}`,
       compatibility: 'Requires macOS Ventura+',
       lightweight: 'Less than 900KB, ultra lightweight',
     },
@@ -251,6 +260,10 @@ const translations: Record<Locale, Translations> = {
       feedback: 'Feedback & Issues',
       github: 'GitHub',
       privacy: 'Privacy Policy',
+    },
+    community: {
+      sectionTitle: 'Join Community',
+      description: 'Scan the QR code to join our WeChat group. Share tips with other users and get the latest updates.',
     },
   },
 };

@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import SetupGuide from './components/SetupGuide';
+import Community from './components/Community';
 import Footer from './components/Footer';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Hero />
           <Features />
           <SetupGuide />
+          <Community />
         </main>
         <Footer />
       </div>

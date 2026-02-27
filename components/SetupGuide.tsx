@@ -22,7 +22,7 @@ const SetupGuide: React.FC = () => {
     <section
       id="setup-guide"
       ref={sectionRef}
-      className="py-10 px-6 md:px-12 bg-white"
+      className="pt-10 pb-4 px-6 md:px-12 bg-white"
     >
       <div className="max-w-4xl mx-auto">
         {/* Collapsible Header */}
