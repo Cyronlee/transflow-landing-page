@@ -60,7 +60,7 @@ const translations: Record<Locale, Translations> = {
       downloadBtn: '立即下载',
       version: `v${version}`,
       compatibility: '适用于 macOS Ventura+',
-      lightweight: '体积不到 900KB，轻如蝉翼',
+      lightweight: '体积不到 5MB，轻如蝉翼',
     },
     features: {
       sectionTitle: '核心功能',
@@ -103,7 +103,7 @@ const translations: Record<Locale, Translations> = {
         {
           id: 'lightweight',
           title: '🪶 轻量小巧',
-          description: '应用体积不到 900KB，小而美，即装即用，极致节省磁盘空间。',
+          description: '应用体积不到 5MB，小而美，即装即用，极致节省磁盘空间。',
         },
       ],
     },
@@ -169,7 +169,7 @@ const translations: Record<Locale, Translations> = {
       downloadBtn: 'Download Now',
       version: `v${version}`,
       compatibility: 'Requires macOS Ventura+',
-      lightweight: 'Less than 900KB, ultra lightweight',
+      lightweight: 'Less than 5MB, ultra lightweight',
     },
     features: {
       sectionTitle: 'Key Features',
@@ -212,7 +212,7 @@ const translations: Record<Locale, Translations> = {
         {
           id: 'lightweight',
           title: '🪶 Ultra Lightweight',
-          description: 'App size under 900KB — small, beautiful, ready to use, saving maximum disk space.',
+          description: 'App size under 5MB — small, beautiful, ready to use, saving maximum disk space.',
         },
       ],
     },
