@@ -10,9 +10,12 @@ const Hero: React.FC = () => {
   return (
     <section className="pt-28 pb-12 px-6 md:px-12 bg-white flex flex-col items-center text-center">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-gradient">
-          {t.hero.title}
-        </h1>
+        <div className="flex items-center justify-center space-x-2 mb-6">
+          <img src="/logo.png" alt="TransFlow" className="w-16 h-16 rounded-xl shadow-sm" />
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-gradient">
+            {t.hero.title}
+          </h1>
+        </div>
         <p className="text-xl md:text-2xl text-slate-500 font-medium mb-5 leading-relaxed max-w-2xl mx-auto">
           {t.hero.subtitle1}
           <br />
