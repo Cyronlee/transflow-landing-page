@@ -35,9 +35,9 @@ GET /api/version
 
 ```json
 {
-  "version": "1.0.0",
-  "url": "https://github.com/cyronlee/transflow/releases/latest",
-  "release_date": "2026-02-09"
+  "version": "1.5.0",
+  "url": "https://github.com/Cyronlee/TransFlow/releases/download/v1.5.0/TransFlow-1.5.0.pkg",
+  "release_date": "2026-03-20"
 }
 ```
 
