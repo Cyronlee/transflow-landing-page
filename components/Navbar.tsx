@@ -1,15 +1,14 @@
 
 import React from 'react';
 import { useI18n } from '../i18n';
-import { version } from '../version.json';
-
-const DOWNLOAD_URL = `https://github.com/Cyronlee/TransFlow/releases/download/v${version}/TransFlow-${version}.pkg`;
+import { useRelease } from '../useRelease';
 
 const Navbar: React.FC = () => {
   const { locale, t, toggleLocale } = useI18n();
+  const { downloadUrl } = useRelease();
 
   const handleDownload = () => {
-    window.location.href = DOWNLOAD_URL;
+    window.location.href = downloadUrl;
   };
 
   return (

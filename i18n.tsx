@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
-import { version } from './version.json';
 
 export type Locale = 'zh' | 'en';
 
@@ -12,7 +11,6 @@ interface Translations {
     subtitle1: string;
     subtitle2: string;
     downloadBtn: string;
-    version: string;
     compatibility: string;
     lightweight: string;
   };
@@ -46,7 +44,6 @@ const translations: Record<Locale, Translations> = {
       subtitle1: 'macOS 实时语音转录与翻译 App。',
       subtitle2: 'Apple Speech 原生驱动，性能与隐私双在线。',
       downloadBtn: '立即下载',
-      version: `v${version}`,
       compatibility: '适用于 macOS Ventura+',
       lightweight: '体积不到 5MB，轻如蝉翼',
     },
@@ -115,7 +112,6 @@ const translations: Record<Locale, Translations> = {
       subtitle1: 'Real-time speech transcription & translation for macOS.',
       subtitle2: 'Natively powered by Apple Speech — performance and privacy, both online.',
       downloadBtn: 'Download Now',
-      version: `v${version}`,
       compatibility: 'Requires macOS Ventura+',
       lightweight: 'Less than 5MB, ultra lightweight',
     },

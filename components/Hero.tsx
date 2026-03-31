@@ -1,11 +1,10 @@
 import React from 'react';
 import { useI18n } from '../i18n';
-import { version } from '../version.json';
-
-const DOWNLOAD_URL = `https://github.com/Cyronlee/TransFlow/releases/download/v${version}/TransFlow-${version}.pkg`;
+import { useRelease } from '../useRelease';
 
 const Hero: React.FC = () => {
   const { t } = useI18n();
+  const { version, downloadUrl } = useRelease();
 
   return (
     <section className="pt-28 pb-12 px-6 md:px-12 bg-white flex flex-col items-center text-center">
@@ -22,7 +21,6 @@ const Hero: React.FC = () => {
           {t.hero.subtitle2}
         </p>
 
-        {/* Application Screenshot */}
         <div className="relative w-full max-w-5xl mx-auto mb-5">
           <img
             src="/demo-1-zh.png"
@@ -33,14 +31,14 @@ const Hero: React.FC = () => {
 
         <div className="flex flex-col items-center space-y-4">
           <button
-            onClick={() => window.location.href = DOWNLOAD_URL}
+            onClick={() => window.location.href = downloadUrl}
             className="group relative inline-flex items-center justify-center px-12 py-4 font-bold text-white transition-all duration-300 bg-[#007AFF] rounded-xl hover:bg-[#4CAF50] shadow-xl hover:shadow-green-200/50 active:scale-95"
             role="button"
           >
             {t.hero.downloadBtn}
           </button>
           <div className="text-xs text-slate-400 space-y-1">
-            <p className="font-semibold">{t.hero.version} • {t.hero.compatibility}</p>
+            <p className="font-semibold">v{version} • {t.hero.compatibility}</p>
             <p>{t.hero.lightweight}</p>
           </div>
         </div>
